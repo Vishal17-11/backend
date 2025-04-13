@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: classroom-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: SUPABASE_URL
+        value: https://udqtznmfmonrluboirnx.supabase.co
+      - key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVkcXR6bm1mbW9ucmx1Ym9pcm54Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ1NTAyODEsImV4cCI6MjA2MDEyNjI4MX0.1h23wEgfSOsWH_9Xb321DLxn5QOIrAMKkwq3DKOFtxA
+        value: your-supabase-key
+      - key: JWT_SECRET
+        generateValue: true  # Auto-generates a secure secret
+      - key: PORT
+        value: 3000
